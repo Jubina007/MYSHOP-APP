@@ -105,7 +105,7 @@ class Bookcontroller extends Controller
     {
         $username= session('user')['username'];
 
-        $result=\DB::select('select book.id,book.imgsrc,book.title,book.author,book.cost,cart.book_qty from(book inner join cart on book.id=cart.bid)where cart.username="'.$username.'"');
+        $result=\DB::select("select book.id,book.imgsrc,book.title,book.author,book.cost,cart.book_qty from(book inner join cart on book.id=cart.bid)where cart.username='$username'");
         $data=['cartitem'=>$result];
         return view('cart',$data);
     }
@@ -126,7 +126,7 @@ class Bookcontroller extends Controller
 
 
         
-        $result=\DB::select('select book.id,book.imgsrc,book.title,book.author,book.cost,cart.book_qty from(book inner join cart on book.id=cart.bid)where cart.username="'.$username.'"');
+        $result=\DB::select("select book.id,book.imgsrc,book.title,book.author,book.cost,cart.book_qty from(book inner join cart on book.id=cart.bid)where cart.username='$username'");
         $data=['cartitem'=>$result];
         return view('cart',$data);
         
@@ -147,7 +147,7 @@ class Bookcontroller extends Controller
 
         
 
-        $result=\DB::select('select book.id,book.imgsrc,book.title,book.author,book.cost,cart.book_qty from(book inner join cart on book.id=cart.bid)where cart.username="'.$username.'"');
+        $result=\DB::select("select book.id,book.imgsrc,book.title,book.author,book.cost,cart.book_qty from(book inner join cart on book.id=cart.bid)where cart.username='$username'");
         $data=['cartitem'=>$result];
         return view('cart',$data);
         
@@ -169,7 +169,7 @@ class Bookcontroller extends Controller
 
         
 
-        $result=\DB::select('select book.id,book.imgsrc,book.title,book.author,book.cost,cart.book_qty from(book inner join cart on book.id=cart.bid)where cart.username="'.$username.'"');
+        $result=\DB::select("select book.id,book.imgsrc,book.title,book.author,book.cost,cart.book_qty from(book inner join cart on book.id=cart.bid)where cart.username='$username'");
         $data=['cartitem'=>$result];
         return view('cart',$data);
         

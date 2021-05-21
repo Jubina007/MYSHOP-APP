@@ -360,7 +360,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 									 <div class="form-group">
 											<label for="exampleInputFile">Book image</label>
-											 <input type="file" id="exampleInputFile">
+											 <input type="file" id="exampleInputFile" required>
 												<p class="help-block">Location of the Book image</p>
 											 </div>
 												 <button type="submit" class="btn btn-default">Submit</button>
